@@ -43,6 +43,17 @@ function darkMode() {
     div.style.background = colors.bg2;
     div.style.border = "none";
     div.style.color = colors.sub;
+
+    let kids = Array.from(div.children);
+
+    kids.forEach((tag) => {
+      let grandSon = Array.from(tag.children);
+      if (grandSon.some((tag) => tag.tagName === "STRONG")) {
+        grandSon.forEach((tag) => {
+          if (tag.tagName === "STRONG") tag.style.color = colors.co;
+        });
+      }
+    });
   });
 
   let small = document.body.querySelectorAll("small");
@@ -75,16 +86,4 @@ function darkMode() {
 
   let constant = document.body.querySelectorAll(".constant");
   constant.forEach((tag) => (tag.style.color = colors.sub));
-
-  let panelHeading = document.body.querySelectorAll(".panel-heading");
-  panelHeading.forEach((tag) => (tag.style.background = colors.bg2));
-
-  let panelDefault = document.body.querySelectorAll(".panel-default");
-  panelDefault.forEach((tag) => (tag.style.border = "none"));
-
-  let li = document.body.querySelectorAll("li");
-  li.forEach((li) => {
-    li.style.background = colors.bg2;
-    li.style.border = `1px solid ${colors.sub}`;
-  });
 }
