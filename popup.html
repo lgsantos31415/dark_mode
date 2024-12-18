@@ -1,9 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark Mode</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      body {
+        width: 300px;
+        height: max-content;
+        padding-block: 16px;
+        background: #000;
+        color: #fff;
+      }
+      main {
+        padding-inline: 24px;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      h3 {
+        font-size: 16px;
+        line-height: 16px;
+        margin-block: 2px 12px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 14px;
+      }
+      a {
+        color: #a2a2a2;
+      }
+      footer {
+        margin-top: 12px;
+        padding-block: 2px;
+        width: 100%;
+        height: fit-content;
+        background: #2f2f2f;
+      }
+      #row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div id="row">
+        <img src="./icons/128.png" alt="Ícone" width="64px" />
+        <h1>Dark Mode</h1>
+      </div>
+      <h3>Obrigado por instalar a extensão Dark Mode!</h3>
+      <p>
+        Agora você poderá acessar o site
+        <a
+          href="http://buildyourownlisp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >buildyourownlisp</a
+        >
+        no modo escuro!
+      </p>
+    </main>
+    <footer>
+      <p>
+        Extensão criada por
+        <a
+          href="http://github.com/lgsantos31415"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Luiz</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
